@@ -1,0 +1,159 @@
+:root {
+/* Primary */
+--softBlue: hsl(215, 51%, 70%);
+--cyan: hsl(178, 100%, 50%);
+
+/* Neutral */
+--darkBlueMain: hsl(217, 54%, 11%);
+--darkBlueCard: hsl(216, 50%, 16%);
+--darkBlueLine: hsl(215, 32%, 27%);
+--white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--darkBlueMain);
+}
+
+
+/* Layout */
+
+.nft-card {
+    width: 100%;
+    max-width: 330px;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--darkBlueCard);
+    line-height: 1.8rem;
+    border-radius: 15px;
+    padding: 1rem;
+}
+
+.nft-name {
+    padding: 1rem 0 .5rem 0;
+}
+
+.nft-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.eth-price, .time-container {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 0 0 .5rem 0;
+}
+
+.creator-info {
+    border-top: 1px solid var(--darkBlueLine);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.creator-link {
+    padding: 1rem 0 0 0rem;
+}
+
+
+/* Images */
+
+.nft-img {
+    height: 16rem;
+    width: 16rem;
+    align-self: center;
+    border-radius: 15px;
+    margin: .5rem 0 0 0;
+}
+
+.creator-img {
+    height: 2rem;
+    margin: 1rem 0 0 0;
+    border: .5px solid var(--white);
+    border-radius: 50px;
+}
+
+.eth-icon, .clock-icon {
+    height: .9rem;
+}
+
+/* Text */
+
+h1 {
+    color: var(--white);
+    font-size: 1.1rem;
+    padding: 0 0 .5rem 0;
+}
+
+span {
+    color: var(--softBlue);
+    font-size: .8rem;
+    font-weight: 300;
+}
+
+p {
+    color: var(--softBlue);
+    font-weight: 300;
+}
+
+.value {
+    color: var(--cyan);
+    font-weight: 700;
+    font-size: .8rem;
+}
+
+.timeLeft {
+    font-size: .8rem;
+    font-weight: 300;
+}
+
+/* Links */
+
+.creator-info a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 300;
+    font-size: .8rem;
+}
+
+.creator-info a:hover {
+    color: var(--cyan);
+}
+
+footer {
+    visibility: hidden;
+}
+/* Media Queries */
+
+@media only screen and (min-width: 480px) {
+    .nft-card {
+        height: 31.6rem;
+    }
+
+    footer {
+        visibility: visible;
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+    }
+
+    footer, footer a {
+        color: var(--softBlue);
+        text-decoration: none;
+    }
+}
